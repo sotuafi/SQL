@@ -1,0 +1,63 @@
+Select *
+From `molten-avenue-353717.Cardiovascular_Disease.HeartDisease_Stroke_Adults`;
+
+Select *
+From `molten-avenue-353717.Cardiovascular_Disease.HeartDisease_Stroke_Adults`
+Where Year = "2000";
+
+Select Year, LocationAbbr AS State, Class, Topic, DataSource
+From `molten-avenue-353717.Cardiovascular_Disease.HeartDisease_Stroke_Adults`
+Where LocationAbbr = "NV"
+Order By Year DESC;
+
+Select Year, LocationAbbr AS State, LocationDesc AS County, Class, Topic, DataSource
+From `molten-avenue-353717.Cardiovascular_Disease.HeartDisease_Stroke_Adults`
+Where LocationAbbr = "NV"
+Order By Year Desc;
+
+Select Year, LocationAbbr AS State, LocationDesc AS County, Class, Topic,DataSource
+From `molten-avenue-353717.Cardiovascular_Disease.HeartDisease_Stroke_Adults`
+Where LocationAbbr ="NV"
+Order By LocationDesc, Year Desc;
+
+Select Year, LocationAbbr AS State, 
+LocationDesc As County, Class, 
+Topic, 
+Stratification1 AS AgeRange, 
+X_long AS Longitude, 
+Y_lat AS Latitude,DataSource
+From `molten-avenue-353717.Cardiovascular_Disease.HeartDisease_Stroke_Adults`
+Where LocationAbbr = "NV"
+Order By LocationDesc, Year Desc;
+
+Select Year, LocationAbbr AS State, 
+LocationDesc As County, Class, 
+Topic, 
+Stratification1 AS AgeRange, 
+X_long AS Longitude, 
+Y_lat AS Latitude,DataSource
+From `molten-avenue-353717.Cardiovascular_Disease.HeartDisease_Stroke_Adults`
+Where LocationAbbr = "NV" AND NOT Year = "2011-2018" AND NOT Year = "2005-2011" AND NOT Year = "1999-2005"
+Order By LocationDesc, Year Desc;
+
+Select Year, LocationAbbr AS State, 
+LocationDesc As County, Class, 
+Topic, 
+Stratification1 AS AgeRange,
+Data_Value AS DataValue,
+X_long AS Longitude, 
+Y_lat AS Latitude,DataSource
+From `molten-avenue-353717.Cardiovascular_Disease.HeartDisease_Stroke_Adults`
+Where LocationAbbr = "NV" AND NOT Year = "2011-2018" AND NOT Year = "2005-2011" AND NOT Year = "1999-2005"
+Order By LocationDesc, Year Desc;
+
+Select Year, LocationAbbr AS State, 
+LocationDesc As County, 
+Topic AS Type, 
+Stratification1 AS AgeRange,
+Data_Value AS DataValue,
+X_long AS Longitude, 
+Y_lat AS Latitude,DataSource
+From `molten-avenue-353717.Cardiovascular_Disease.HeartDisease_Stroke_Adults`
+Where LocationAbbr = "NV" AND NOT Year = "2011-2018" AND NOT Year = "2005-2011" AND NOT Year = "1999-2005"
+Order By LocationDesc, Year Desc, Topic Desc;
