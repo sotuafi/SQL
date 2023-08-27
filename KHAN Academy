@@ -1,0 +1,13 @@
+
+Create Table Fruit (ID Integer Primary Key, Name TEXT, Color Text, Price NUMERIC);
+Insert Into Fruit Values ( 1, "Mango", "Orange", "$2");
+Insert Into Fruit Values (2, "Bannana", "Yellow", "$2");
+Insert Into Fruit Values (3, " Watermelon", "Green", "$5");
+Select *
+From Fruit
+
+Create Table BookStore ( id Integer, name Text, rating Integer);
+Insert Into BookStore Values (1, "Make Your Bed", "5"),(2, "Percy Jackson adn the Lightning Thief", "5"), (3, " Extreme Ownership", "4.5");
+Select *
+From BookStore;
+
